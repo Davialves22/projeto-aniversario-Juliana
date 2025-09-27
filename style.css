@@ -1,69 +1,170 @@
 /* ====== RESET E BASE ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   background-color: #141414;
   color: white;
   animation: fadeInBody 1s ease-in;
 }
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+}
 
-header {
+/* ====== CABEÇALHO ====== */
+.cabecalho {
+  background-color: black;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: black;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  gap: 30px;
+  animation: slideInTop 1s ease-out;
 }
-header .logo img {
+.cabecalho .logo img {
   height: 40px;
 }
-nav {
-  margin-left: 2rem;
+.cabecalho nav {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 15px;
 }
-nav a {
+.cabecalho nav a,
+.cabecalho nav .dropdown-toggle {
   color: white;
   text-decoration: none;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.cabecalho nav a:hover,
+.cabecalho nav .dropdown-toggle:hover {
+  color: #ff0000;
+}
+
+/* ====== DROPDOWN (estilo Bootstrap-like) ====== */
+.cabecalho nav .dropdown-menu {
+  background-color: #141414;
+  border: none;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  display: block !important;
+  visibility: hidden;
+  position: absolute;
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.dropdown-item {
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.dropdown-item:hover {
+  background-color: #333;
+  color: #ff0000;
+}
+
+/* ====== BANNER ====== */
+.banner {
+  position: relative;
+  background: url("inserts/foto9.jpeg") no-repeat center center/cover;
+  padding: 120px 1rem 2rem;
+  animation: fadeInBanner 1.2s ease-in-out;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 70%);
+  inset: 0;
+  z-index: 1;
+}
+.conteudo {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 100%;
+  animation: slideInLeft 1s ease-in-out;
+}
+.titulo {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  margin: 0;
+}
+.detalhes {
+  margin: 10px 0;
+  font-size: 12px;
+  color: #ccc;
+}
+.descricao {
+  margin-top: 45px;
+  font-size: 14px;
+  line-height: 1.3;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* ====== BOTÕES ====== */
+.botoes {
+  margin-top: 20px;
+}
+.botoes button {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-nav a:hover {
-  color: #e50914;
+.botoes button:hover {
+  background: #b20710;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #e50914, 0 0 20px #e50914;
 }
+
+/* ====== SWIPER (Momentos) ====== */
+.momentos {
+  padding: 1.5rem 1rem;
+  animation: fadeInUp 1.4s ease-in;
+}
+.momentos h2,
 .section-title {
   font-family: "Great Vibes", cursive;
   font-size: 2rem;
-  margin: 2rem 0 1rem 2rem;
+  margin-bottom: 1rem;
   color: #e50914;
 }
 .swiper {
-  padding-left: 2rem;
-  padding-bottom: 2rem;
+  width: 100%;
+  padding-bottom: 20px;
+  padding-left: 1rem;
 }
-
 .swiper-slide {
-  gap: 10px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
-
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
 .card-link {
   display: block;
+  text-decoration: none;
   color: inherit;
-  text-decoration: none !important;
 }
-
-.card-link:hover {
-  /* Se quiser efeito hover no card todo */
-  filter: brightness(1.1);
-}
-
 .card-swiper {
   background-color: #222;
   border-radius: 8px;
@@ -72,32 +173,102 @@ nav a:hover {
   margin-top: 20px;
   box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
   transition: transform 0.3s ease;
-  height: 220px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espaçamento entre itens */
-  color: white;
+  gap: 20px;
   padding: 10px;
 }
-
 .card-swiper:hover {
   transform: scale(1.08);
   box-shadow: 0 0 15px rgba(229, 9, 20, 0.8);
 }
-
 .card-swiper img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
-  flex-shrink: 0; /* Garante que a imagem não encolha */
 }
-
 .card-title {
   font-size: 1rem;
   font-weight: 700;
   color: #ff4b4b;
-  flex-shrink: 0; /* Evita que o título encolha */
+}
+
+/* ====== LISTA DE EPISÓDIOS (páginas internas) ====== */
+.lista-aniversarios {
+  background-color: #111;
+  padding: 3rem 1rem;
+}
+.titulo-lista {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.item-aniversario {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.item-aniversario:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+.item-aniversario img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-right: 3px solid #ff4b4b;
+}
+.item-aniversario .info {
+  padding: 1rem;
+}
+.item-aniversario h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #ff4b4b;
+}
+.item-aniversario p {
+  margin: 0.4rem 0 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+.item-link {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+.item-link * {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ====== PAGINAÇÃO ====== */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+.paginacao button {
+  background-color: #222;
+  color: white;
+  border: 1px solid #ff4b4b;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.paginacao button:hover,
+.paginacao button.ativo {
+  background-color: #ff4b4b;
+  color: white;
 }
 
 /* ====== FOOTER ====== */
@@ -110,24 +281,126 @@ footer {
   animation: fadeInBody 1s ease-in;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #e50914;
-}
-@media (max-width: 768px) {
-  .card-swiper {
-    height: 140px;
-  }
-  .card-swiper img {
-    height: 100px;
-  }
-}
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.5rem;
-    margin-left: 1rem;
+/* ====== RESPONSIVIDADE ====== */
+@media screen and (max-width: 1024px) {
+  .cabecalho {
+    padding: 1rem;
+    gap: 15px;
   }
   .swiper {
     padding-left: 1rem;
+  }
+  .card-swiper {
+    min-height: 200px;
+  }
+  .card-swiper img {
+    height: 130px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-swiper {
+    min-height: 160px;
+  }
+  .card-swiper img {
+    height: 110px;
+  }
+  .titulo-lista,
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .item-aniversario {
+    flex-direction: column;
+    text-align: center;
+  }
+  .item-aniversario img {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 3px solid #ff4b4b;
+  }
+  .item-aniversario .info {
+    padding: 1rem 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-title,
+  .titulo-lista {
+    font-size: 1.5rem;
+  }
+  nav {
+    gap: 0.8rem;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .card-swiper {
+    min-height: 140px;
+    padding: 8px;
+  }
+  .card-swiper img {
+    height: 90px;
+  }
+  .item-aniversario h3 {
+    font-size: 1rem;
+  }
+  .item-aniversario p {
+    font-size: 0.9rem;
+  }
+  .paginacao button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  footer {
+    font-size: 11px;
+  }
+}
+
+/* ====== ANIMAÇÕES ====== */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
