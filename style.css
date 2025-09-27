@@ -127,20 +127,23 @@ body {
 }
 
 .botoes button {
-  background: #ff0000;
-  color: white;
+  background: #e50914; /* Vermelho Netflix */
+  color: #ffffff;
   border: none;
-  padding: 10px 16px;
+  padding: 10px 20px;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .botoes button:hover {
-  background: #cc0000;
+  background: #b20710;
   transform: scale(1.05);
+  box-shadow: 0 0 10px #e50914, 0 0 20px #e50914;
 }
 
 /* ====== MOMENTOS ====== */
