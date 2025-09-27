@@ -117,7 +117,7 @@ body {
 
 @media (min-width: 900px) {
   .swiper-slide img {
-    width: 330px !important;
+    width: 350px;
   }
 }
 
