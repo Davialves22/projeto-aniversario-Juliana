@@ -1,163 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presente July Amor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Presente July Amor - Netflix Style</title>
 
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+      rel="stylesheet" />
 
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet">
+      rel="stylesheet" />
 
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- Font Awesome -->
     <link
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <link rel="shortcut icon" href="inserts/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 
   </head>
   <body>
 
-    <header class="cabecalho">
+    <header>
       <div class="logo">
-        <img src="inserts/Netflix-1.gif" class="logo" alt width="50px">
+        <img src="inserts/Netflix-1.gif" alt="Logo" />
       </div>
-
       <nav>
         <a href="#">Início</a>
-
-        <div class="dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Séries
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Aniverário</a></li>
-            <li><a class="dropdown-item" href="#">Aniversário de Namoro</a></li>
-            <li><a class="dropdown-item" href="#">Aniversário de
-                Casamento</a></li>
-          </ul>
-        </div>
-
+        <a href="#">Séries</a>
         <a href="#">Filmes</a>
         <a href="#">Minha Lista</a>
       </nav>
-
     </header>
 
-    <!--Conteúdo do Site-->
-    <section class="banner">
-      <div class="conteudo">
-        <p class="titulo">Juliana Vitória</p>
-
-        <p class="detalhes">
-          <span>
-            01 DE NOVEMBRO, 24 TEMPORADAS
-          </span>
-
-          <span class="stars">
-            <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-            <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-            <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-            <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-            <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-          </span>
-
-          <p class="descricao">
-            🎬 <strong>Juliana & Davi: Um Amor de 24 Primaveras.</strong>
-            <br><br>
-
-            No dia 01 de novembro, Juliana completa 24 anos. Mas essa não é
-            apenas a história de mais um aniversário. É a história de uma mulher
-            incrível que, mesmo ainda não morando com o amor da sua vida, já
-            divide com ele todos os sonhos, promessas e planos para um futuro
-            juntos.
-
-            Davi, seu noivo apaixonado, sabe que Juliana não é apenas a
-            protagonista dessa trama — ela é o motivo, o coração, a razão de
-            cada capítulo. Ela é a luz que ilumina seus dias, a força que o
-            inspira, a doçura que acalma, e o desejo que o move.
-
-            Aos 24 anos, Juliana carrega em si a beleza de quem ama com verdade,
-            cuida com intensidade e transforma a vida ao seu redor com pequenos
-            gestos de carinho. Davi não comemora apenas sua idade, mas celebra a
-            sorte imensa de ter ao seu lado a mulher que é, ao mesmo tempo, sua
-            melhor amiga, sua parceira, sua esposa do coração e sua eterna
-            paixão.
-
-            Nesta história, ainda há cenas que não foram gravadas: o dia em que
-            acordarão lado a lado, as manhãs de café juntos, as noites de
-            filmes, os beijos sem hora para acabar e os abraços que nunca mais
-            vão precisar terminar. Mas o roteiro já está escrito — e o final
-            feliz está garantido.
-
-            Juliana, 24 anos. Davi, para sempre.
-            ❤️✨
-          </p>
-
-          <div class="botoes">
-            <button><i class="fa-solid fa-play"
-                style="color: rgba(30,48,80);"></i> Continuar</button>
-
-            <button><i class="fa-solid fa-star" style=" color:
-                rgba(30,48,80);"></i> Favorito</button>
+    <!-- Aniversários -->
+    <section>
+      <h2 class="section-title">Aniversários</h2>
+      <div class="swiper aniversarios-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pages/Aniversario/24Anos/24Anos.html" class="card-link">
+              <div class="card-swiper">
+                <img src="inserts/foto9.jpeg" alt="Aniversário Juliana" />
+                <div class="card-title">Juliana Vitória - 24 anos</div>
+              </div>
+            </a>
           </div>
-
-        </p>
-
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
-    <section class="momentos">
-      <h2>Nossos Melhores Momentos:</h2>
-
-      <!--Swiper de fotos-->
-      <div class="swiper">
-
+    <!-- Aniversários de Namoro -->
+    <section>
+      <h2 class="section-title">Aniversários de Namoro</h2>
+      <div class="swiper namoro-swiper">
         <div class="swiper-wrapper">
-
-          <div class="swiper-slide"><img src="inserts/Foto1.jpeg" alt></div>
-          <div class="swiper-slide"><img src="inserts/foto2.jpeg" alt></div>
-          <div class="swiper-slide"><img src="inserts/foto3.jpeg" alt></div>
-          <div class="swiper-slide"><img src="inserts/foto4.jpeg" alt></div>
-          <div class="swiper-slide"><img src="inserts/foto5.jpeg" alt></div>
-          <div class="swiper-slide"><img src="inserts/foto6.jpeg" alt></div>
-          <div class="swiper-slide"><img src="inserts/foto9.jpeg" alt></div>
-
+          <div class="swiper-slide">
+            <a href="namoro/1ano.html" class="card-link">
+              <div class="card-swiper">
+                <img src="inserts/Foto1.jpeg" alt="Namoro Juliana e Davi" />
+                <div class="card-title">Juliana & Davi - 1 ano</div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="namoro/primeiro-encontro.html" class="card-link">
+              <div class="card-swiper">
+                <img src="inserts/Juliana_Davi_Namoro2.jpg"
+                  alt="Namoro Juliana e Davi" />
+                <div class="card-title">1º Encontro</div>
+              </div>
+            </a>
+          </div>
         </div>
-
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
+    </section>
 
+    <!-- Aniversários de Casamento -->
+    <section>
+      <h2 class="section-title">Aniversários de Casamento</h2>
+      <div class="swiper casamento-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="casamento/futuro.html" class="card-link">
+              <div class="card-swiper">
+                <img src="inserts/Casamento_Futuro.jpg"
+                  alt="Futuro Casamento" />
+                <div class="card-title">Futuro Casamento - 2026</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
 
     <footer>
       2025 - Davi Gerson - todos os direitos reservados
     </footer>
 
+    <!-- Scripts Bootstrap e Swiper -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"></script>
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"></script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
   </body>
 </html>

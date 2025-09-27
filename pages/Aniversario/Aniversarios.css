@@ -1,0 +1,308 @@
+/* ====== RESET E BASE ====== */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: white;
+  animation: fadeInBody 1s ease-in;
+}
+
+/* ====== CABEÇALHO ====== */
+.cabecalho {
+  background-color: black;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  animation: slideInTop 1s ease-out;
+}
+
+.cabecalho nav {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cabecalho nav a,
+.cabecalho nav .dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.cabecalho nav a:hover,
+.cabecalho nav .dropdown-toggle:hover {
+  color: #ff0000;
+}
+
+/* ====== DROPDOWN BOOTSTRAP COM ANIMAÇÃO ====== */
+.cabecalho nav .dropdown-menu {
+  background-color: #141414;
+  border: none;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  display: block !important;
+  visibility: hidden;
+  position: absolute;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.cabecalho nav .dropdown-item {
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cabecalho nav .dropdown-item:hover {
+  background-color: #333;
+  color: #ff0000;
+}
+
+/* ====== Lista de Episodios ====== */
+.lista-aniversarios {
+  background-color: #111;
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.titulo-lista {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.item-aniversario {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-aniversario:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.item-aniversario img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-right: 3px solid #ff4b4b;
+}
+
+.item-aniversario .info {
+  padding: 1rem;
+}
+
+.item-aniversario h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #ff4b4b;
+}
+
+.item-aniversario p {
+  margin: 0.4rem 0 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* ====== Corrige estilo de links dentro dos cards ====== */
+.item-link {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.item-link * {
+  color: inherit;
+  text-decoration: none;
+}
+.item-link:hover .item-aniversario {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* ====== Paginação ====== */
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.paginacao button {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #ff4b4b;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.paginacao button:hover,
+.paginacao button.ativo {
+  background-color: #ff4b4b;
+  color: white;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  animation: fadeInBody 1s ease-in;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cabecalho nav {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .item-aniversario {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item-aniversario img {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 3px solid #ff4b4b;
+  }
+
+  .item-aniversario .info {
+    padding: 1rem 0.5rem;
+  }
+
+  .item-aniversario h3 {
+    font-size: 1.2rem;
+  }
+
+  .item-aniversario p {
+    font-size: 0.95rem;
+  }
+
+  .titulo-lista {
+    font-size: 2rem;
+  }
+
+  .paginacao {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .paginacao button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo-lista {
+    font-size: 1.8rem;
+  }
+
+  .item-aniversario h3 {
+    font-size: 1rem;
+  }
+
+  .item-aniversario p {
+    font-size: 0.9rem;
+  }
+
+  .paginacao button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* ====== ANIMAÇÕES ====== */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
