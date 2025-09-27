@@ -15,7 +15,13 @@ const swiper = new Swiper(".swiper", {
     600: {
       loop: true,
       slidesPerView: 4,
-      spaceBetween: 18,
+      spaceBetween: 20,
+    },
+
+    900: {
+      loop: true,
+      slidesPerView: 5,
+      spaceBetween: 40,
     },
   },
 });
