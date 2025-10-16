@@ -1,171 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Presente July Amor - Estilo Netflix</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente July Amor</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="inserts/favicon.ico" type="image/x-icon">
+    <body>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-
-  <!-- Seu CSS personalizado -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- Cabeçalho -->
-  <header class="cabecalho">
-    <div class="logo">
-      <img src="inserts/Netflix-1.gif" alt="Logo Netflix" />
-    </div>
-    <nav>
-      <a href="#">Início</a>
-      <div class="dropdown">
-        <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">Séries</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Aniversários</a>
-          <a class="dropdown-item" href="#">Namoro</a>
-          <a class="dropdown-item" href="#">Casamento</a>
+      <header class="cabecalho">
+        <div class="logo">
+          <img src="inserts/Netflix-1.gif" class="logo" alt width="50px">
         </div>
-      </div>
-      <a href="#">Filmes</a>
-      <a href="#">Minha Lista</a>
-    </nav>
-  </header>
 
-  <!-- Banner Principal -->
-  <section class="banner">
-    <div class="conteudo">
-      <p class="titulo">Juliana Vitória</p>
-      <p class="detalhes">
-        01 DE NOVEMBRO, 24 TEMPORADAS <br />
-        <span class="stars">
-          <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-          <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-          <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-          <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-          <i class="fa-solid fa-star" style="color: #ff0000;"></i>
-        </span>
-      </p>
-      <p class="descricao">
-        Juliana, protagonista da história mais linda de amor. Davi, seu noivo, celebra cada temporada com paixão e carinho. Essa história ainda está sendo escrita, com um final garantidamente feliz. ❤️✨
-      </p>
-      <div class="botoes">
-        <button><i class="fa-solid fa-play"></i> Assistir</button>
-        <button><i class="fa-solid fa-star"></i> Favoritar</button>
-      </div>
-    </div>
-  </section>
+        <nav>
+          <a href="index.html">Início</a>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Séries
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item"
+                  href="pages/Aniversario/Aniversarios.html">Aniversários</a></li>
+              <li><a class="dropdown-item"
+                  href="pages/AniversariosNamoro/Aniversariosdenamoro.html">Aniversários
+                  de Namoro</a></li>
+              <li><a class="dropdown-item" href="#">Aniversários de
+                  Casamento</a></li>
+            </ul>
+          </div>
+          <a href="#">Filmes</a>
+          <a href="#">Minha Lista</a>
+        </nav>
+      </header>
 
-  <!-- Swiper - Aniversários -->
-  <section class="momentos">
-    <h2>Aniversários</h2>
-    <div class="swiper aniversarios-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="pages/Aniversario/Aniversarios.html" class="card-link">
-            <img src="inserts/foto9.jpeg" alt="Aniversário Juliana" />
-            <div class="card-title">Juliana - 24 anos</div>
-          </a>
+      <!--Conteúdo do Site-->
+      <section class="banner">
+        <div class="conteudo">
+          <p class="titulo">Nossos Aniversários</p>
+
+          <p class="detalhes">
+            <span class="stars">
+              <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+              <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+              <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+              <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+              <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+            </span>
+          </p>
+
+          <p class="descricao">
+            Juliana, criei este site pensando em nós. Aqui é o nosso cantinho,
+            um
+            lugar para eu registrar todos os nossos aniversários de namoro e
+            também os seus aniversários, para que cada momento especial fique
+            guardado e visível.
+            Mais do que datas, este site é uma forma de mostrar o quanto eu te
+            amo, o quanto cada instante ao seu lado é importante e como você
+            transforma a minha vida. Cada lembrança, cada comemoração, cada
+            detalhe do nosso amor está aqui, para que possamos sempre reviver e
+            celebrar tudo que vivemos juntos.
+            Este é o nosso espaço de amor, carinho e lembranças — um lugar só
+            nosso, feito com todo o meu coração.
+          </p>
+
+          <div class="botoes">
+            <button><i class="fa-solid fa-play"
+                style="color: rgba(30,48,80);"></i> Continuar</button>
+            <button><i class="fa-solid fa-star"
+                style="color: rgba(30,48,80);"></i> Favorito</button>
+          </div>
         </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Swiper - Namoro -->
-  <section class="momentos">
-    <h2>Aniversários de Namoro</h2>
-    <div class="swiper namoro-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="#" class="card-link">
-            <img src="inserts/Foto1.jpeg" alt="1 ano de namoro" />
-            <div class="card-title">1 Ano de Namoro</div>
-          </a>
+      <!-- Aniversários dela -->
+      <section class="lista-aniversarios">
+        <h2 class="titulo-lista">Todos os aniversários de Juliana</h2>
+
+        <div id="aniversarios-juliana-container">
+          <div class="item-aniversario">
+            <img src="inserts/foto9.jpeg" alt="Juliana 24 anos">
+            <div class="info">
+              <h3>Temporada 24 - Juliana 24.0</h3>
+              <p>01 de Novembro de 2024</p>
+            </div>
+          </div>
+          <div class="item-aniversario">
+            <img src="inserts/Foto1.jpeg" alt="Juliana 23 anos">
+            <div class="info">
+              <h3>Temporada 23 - Juliana 23.0</h3>
+              <p>01 de Novembro de 2023</p>
+            </div>
+          </div>
+          <div class="item-aniversario">
+            <img src="inserts/Foto1.jpeg" alt="Juliana 22 anos">
+            <div class="info">
+              <h3>Temporada 22 - Juliana 22.0</h3>
+              <p>01 de Novembro de 2022</p>
+            </div>
+          </div>
         </div>
-        <div class="swiper-slide">
-          <a href="#" class="card-link">
-            <img src="inserts/Juliana_Davi_Namoro2.jpg" alt="1º Encontro" />
-            <div class="card-title">1º Encontro</div>
-          </a>
+
+        <div id="paginacao-juliana" class="paginacao"></div>
+      </section>
+
+      <!-- Aniversários de namoro -->
+      <section class="lista-aniversarios">
+        <h2 class="titulo-lista">Nossos Aniversários de Namoro</h2>
+
+        <div id="aniversarios-namoro-container">
+
+          <div class="item-aniversario">
+            <a href="pages/AniversariosNamoro/5anos/5Anos.html">
+              <img src="inserts/foto9.jpeg" alt="5 Anos de namoro">
+              <div class="info">
+                <h3>Temporada 5</h3>
+                <p>20 de Agosto de 2025</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="item-aniversario">
+            <img src="inserts/Foto1.jpeg" alt="4 Anos de namoro">
+            <div class="info">
+              <h3>Temporada 4</h3>
+              <p>20 de Agosto de 2024</p>
+            </div>
+          </div>
+
+          <div class="item-aniversario">
+            <img src="inserts/Foto1.jpeg" alt="3 Anos de namoro">
+            <div class="info">
+              <h3>Temporada 3</h3>
+              <p>20 de Agosto de 2023</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
 
-  <!-- Swiper - Casamento -->
-  <section class="momentos">
-    <h2>Aniversários de Casamento</h2>
-    <div class="swiper casamento-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="#" class="card-link">
-            <img src="inserts/Casamento_Futuro.jpg" alt="Casamento 2026" />
-            <div class="card-title">Futuro Casamento - 2026</div>
-          </a>
-        </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
+        <div id="paginacao-namoro" class="paginacao"></div>
+      </section>
 
-  <!-- Rodapé -->
-  <footer>
-    © 2025 - Davi Gerson para Juliana Vitória 💖 Todos os direitos reservados
-  </footer>
+      <footer>
+        2025 - Davi Gerson - todos os direitos reservados
+      </footer>
 
-  <!-- Swiper & JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script>
-    function createSwiper(selector) {
-      return new Swiper(selector, {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        loop: true,
-        navigation: {
-          nextEl: selector + " .swiper-button-next",
-          prevEl: selector + " .swiper-button-prev",
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        },
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-      });
-    }
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+      <script src="script.js"></script>
 
-    createSwiper(".aniversarios-swiper");
-    createSwiper(".namoro-swiper");
-    createSwiper(".casamento-swiper");
-  </script>
-</body>
-</html>
+    </body>
+  </html>
